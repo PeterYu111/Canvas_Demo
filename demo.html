@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>canvas简单的认识</title>
 </head>
-<body>
-<canvas id="mycanvas" width="200" heigth="100">
-    <p>你的浏览器不支持Canvas</p>
-</canvas>
-<script>
-    var canvas = document.getElementById("mycanvas");
-    var ctx = canvas.getContext("2d");//获取CanvasRenderingContext2D
-    ctx.moveTo(100,50);
-    ctx.lineTo(300,50);
-    ctx.lineTo(300,200);
-    ctx.lineTo(100,200);
-    ctx.lineTo(100,50);
-    //ctx.fill();
-    ctx.stroke();
 
-    ctx.beginPath()
-    ctx.arc(250,150,130,Math.PI*3/2,Math.PI,true);
-    ctx.stroke();
-    ctx.closePath();
-</script>
+<body>
+    <canvas id="mycanvas" width="200" heigth="100">
+        <p>你的浏览器不支持Canvas</p>
+    </canvas>
+    <script>
+        var canvas = document.getElementById("mycanvas");
+        var ctx = canvas.getContext("2d");//获取CanvasRenderingContext2D
+        ctx.moveTo(100, 50);
+        ctx.lineTo(300, 50);
+        ctx.lineTo(300, 200);
+        ctx.lineTo(100, 200);
+        ctx.lineTo(100, 50);
+ 
+        ctx.stroke();
+
+        ctx.beginPath()
+        ctx.arc(250, 150, 130, Math.PI * 3 / 2, Math.PI, true);
+        ctx.stroke();
+        ctx.closePath();
+    </script>
 </body>
+
 </html>
